@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "alchemy deploy --stage prod",
+    "destroy": "alchemy destroy --stage prod"
+  },
+  "dependencies": {
+    "@alchemy.run/gcp": "2.0.0-beta.85",
+    "alchemy": "2.0.0-beta.85",
+    "effect": "4.1.2"
+  }
+}

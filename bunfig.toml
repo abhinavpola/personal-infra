@@ -1,9 +1,9 @@
 [install]
 # Pin exact versions on `bun add` (no ^ ranges); the lockfile is the source of truth.
 exact = true
-# Supply-chain cooldown: only resolve versions published at least 7 days ago.
+# Supply-chain cooldown: only resolve versions published at least 2 days ago.
 # Most malicious releases are caught and yanked within days.
-minimumReleaseAge = 604800 # 7 days, in seconds
+minimumReleaseAge = 172800 # 2 days, in seconds
 # Vetted packages / exact versions that may bypass the cooldown, e.g. "pkg@1.2.3".
 minimumReleaseAgeExcludes = []
 

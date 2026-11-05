@@ -1,0 +1,7 @@
+# Socket.dev GitHub App config: https://docs.socket.dev/docs/socket-yml
+# Install the app on this repo (https://github.com/apps/socket-security) to get
+# supply-chain alerts on PRs that change dependencies.
+version: 2
+githubApp:
+  enabled: true
+  dependencyOverviewEnabled: true

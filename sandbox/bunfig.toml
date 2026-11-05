@@ -1,0 +1,14 @@
+[install]
+# Pin exact versions on `bun add` (no ^ ranges); the lockfile is the source of truth.
+exact = true
+# Supply-chain cooldown: only resolve versions published at least 7 days ago.
+# Most malicious releases are caught and yanked within days.
+minimumReleaseAge = 604800 # 7 days, in seconds
+# Vetted packages / exact versions that may bypass the cooldown, e.g. "pkg@1.2.3".
+minimumReleaseAgeExcludes = []
+
+[install.security]
+# Socket checks every package against its threat intel before install
+# (malware, typosquats, etc.). Free mode needs no token; `socket login`
+# applies your org's policy.
+scanner = "@socketsecurity/bun-security-scanner"

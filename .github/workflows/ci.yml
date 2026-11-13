@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   check:
-    name: Typecheck & lint
+    name: Typecheck, lint & format
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -27,3 +27,4 @@ jobs:
       - run: bun install --frozen-lockfile
       - run: bun check
       - run: bun lint
+      - run: bun fmt --check

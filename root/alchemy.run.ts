@@ -1,8 +1,9 @@
-import * as Alchemy from "alchemy";
 import * as GCP from "@alchemy.run/gcp";
+import * as Alchemy from "alchemy";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
-import { REGION, STATE_BUCKET, state } from "./state.ts";
+
+import { REGION, state, STATE_BUCKET } from "./state.ts";
 
 // The bucket that holds Alchemy state for every stack, including this one.
 // The state store creates it on first use; this stack adopts and manages it.

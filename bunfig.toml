@@ -12,3 +12,7 @@ minimumReleaseAgeExcludes = []
 # (malware, typosquats, etc.). Free mode needs no token; `socket login`
 # applies your org's policy.
 scanner = "@socketsecurity/bun-security-scanner"
+
+[fmt]
+sortImports = true
+sortPackageJson = true

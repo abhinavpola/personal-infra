@@ -1,7 +1,8 @@
-import * as Alchemy from "alchemy";
 import * as GCP from "@alchemy.run/gcp";
+import * as Alchemy from "alchemy";
 import * as Effect from "effect/Effect";
 import * as Layer from "effect/Layer";
+
 import { REGION, state } from "../root/state.ts";
 
 export const Cluster = GCP.Container.Cluster("Cluster", {
@@ -14,9 +15,7 @@ export const Cluster = GCP.Container.Cluster("Cluster", {
 export default Alchemy.Stack(
   "PersonalInfra",
   {
-    providers: GCP.providers().pipe(
-      Layer.provideMerge(GCP.Region(REGION)),
-    ),
+    providers: GCP.providers().pipe(Layer.provideMerge(GCP.Region(REGION))),
     state: state(),
   },
   Effect.gen(function* () {
